@@ -1,0 +1,26 @@
+{
+  "name": "shredtracker-backend",
+  "version": "1.0.0",
+  "description": "Benjamin Escobar | SWDV 691 Capstone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminescobar1/shredtracker-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/benjaminescobar1/shredtracker-backend/issues"
+  },
+  "homepage": "https://github.com/benjaminescobar1/shredtracker-backend#readme",
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "mysql2": "^3.24.6"
+  }
+}
