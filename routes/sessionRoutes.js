@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const requireAuth = require('../middleware/requireAuth');
 
 const { loginUser } = require('../controllers/sessionController');
 
@@ -35,6 +36,14 @@ router.delete('/', (req, res) => {
     return res.status(200).json({
       message: 'Logout successful'
     });
+  });
+});
+
+// Test a protected endpoint
+router.get('/protected', requireAuth, (req, res) => {
+  return res.status(200).json({
+    message: 'Access granted',
+    user_id: req.session.userId
   });
 });
 
