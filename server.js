@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 3000;
 const exerciseRoutes = require('./routes/exerciseRoutes');
 const userRoutes = require('./routes/userRoutes');
 const sessionRoutes = require('./routes/sessionRoutes');
+const workoutRoutes = require('./routes/workoutRoutes');
 
 // Allow the server to receive JSON data
 app.use(express.json());
@@ -31,6 +32,7 @@ app.use(session({
 app.use('/api/exercises', exerciseRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/session', sessionRoutes);
+app.use('/api/workouts', workoutRoutes);
 
 // Test route
 app.get('/', (req, res) => {
